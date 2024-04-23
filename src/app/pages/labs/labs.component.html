@@ -1,9 +1,22 @@
-<h1>Hola mundo cmo estan?</h1>
+<div class="container">
+  <h1>Hola mundo cmo estan?</h1>
       <h1>Hola Yoniher, {{ welcome }}</h1>
-     
-<ul>
+  <ul>
   <li *ngFor = 'let task of tasks' >
     {{task}}
   </li>
-</ul>
+  </ul>
       
+  <img [src]="person.pasaport" alt="">
+  <hr/>
+  <button (click)="clickHandler()" >Click me!!!!</button>
+  <h2>--------------------------------------</h2>
+  <button (dblclick)="clickHandler()" >double me!!!!</button>
+
+  <p>(change)</p>
+  <input type="number" (change)="changehandler($event)">
+
+  <p>(keydown)</p>
+  <input type="text" [value]="person.name" (keydown)="changehandlerkey($event)">
+
+</div>

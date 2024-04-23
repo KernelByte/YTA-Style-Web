@@ -1,5 +1,5 @@
 import { NgFor } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-labs',
@@ -10,7 +10,8 @@ import { Component } from '@angular/core';
 })
 export class LabsComponent {
   welcome = 'YTA Style';
-  tasks = ['jugar','Estudiar','Trabajar','Leer']
+  fullname = signal("Oscar Martinez Zuluaga");
+  tasks = ['jugar','Estudiar','Trabajar','Leer'];
   person = {
     name: "Orlando Escobar",
     age: 27,
@@ -29,6 +30,12 @@ export class LabsComponent {
   changehandlerkey(event: KeyboardEvent){
     const input = event.target as HTMLInputElement;
     console.log(input.value)
+  }
+
+  changehandlerFinal(event: Event){
+    const input = event.target as HTMLInputElement;
+    const valueInput = input.value;
+    this.fullname.set(valueInput)
   }
 
 }

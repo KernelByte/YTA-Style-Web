@@ -18,4 +18,8 @@ export class HomeComponent {
     this.tasks_signal.update((tasks_signal)=>[...tasks_signal,newTask]);
   }
 
+  deleteTask(index: number){
+    this.tasks_signal.update((tasks_signal)=> tasks_signal.filter((task,position)=> position !== index));
+  }
+
 }

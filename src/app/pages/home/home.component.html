@@ -16,11 +16,11 @@
      <!-- This section should be hidden by default and shown when there are todos -->
      <section class="main">
        <ul class="todo-list">
-        <li class="view" *ngFor = 'let task of tasks_signal()' >
+        <li class="view" *ngFor = 'let task of tasks_signal(); index as i ' >
           <div class="view">
             <input class="toggle" type="checkbox" />
             <label>{{ task }}</label>
-            <button class="destroy"></button>
+            <button class="destroy" (click)="deleteTask(i)"></button>
           </div>
           <input class="edit" value="Learn JavaScript" />
         </li>

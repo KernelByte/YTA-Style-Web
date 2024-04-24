@@ -12,6 +12,7 @@ export class LabsComponent {
   welcome = 'YTA Style';
   fullname = signal("Oscar Martinez Zuluaga");
   tasks = ['jugar','Estudiar','Trabajar','Leer'];
+  tasks_signal = signal(['jugar','Estudiar','Trabajar','Leer']);
   person = {
     name: "Orlando Escobar",
     age: 27,

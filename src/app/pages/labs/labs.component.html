@@ -1,4 +1,4 @@
-<div class="container">
+< class="container">
   <h1>Hola mundo cmo estan?</h1>
       <h1>Hola Yoniher, {{ welcome }}</h1>
   <ul>
@@ -29,4 +29,10 @@
       {{i}} {{task}}
     </li>
   </ul>
-</div>
+  <hr/>
+  <div *ngIf="1!==1 && 2!==2; else bloqueSiguiente" >
+    my content
+  </div>
+  <ng-template #bloqueSiguiente>
+    Hola no se cumple la condicion
+  </ng-template>

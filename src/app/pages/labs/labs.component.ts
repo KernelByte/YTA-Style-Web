@@ -1,10 +1,11 @@
 import { NgFor } from '@angular/common';
 import { Component, signal } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-labs',
   standalone: true,
-  imports: [NgFor],
+  imports: [NgFor,CommonModule],
   templateUrl: './labs.component.html',
   styleUrl: './labs.component.css'
 })

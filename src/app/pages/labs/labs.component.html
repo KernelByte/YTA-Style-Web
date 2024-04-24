@@ -1,4 +1,4 @@
-< class="container">
+<div class="container">
   <h1>Hola mundo cmo estan?</h1>
       <h1>Hola Yoniher, {{ welcome }}</h1>
   <ul>
@@ -36,3 +36,7 @@
   <ng-template #bloqueSiguiente>
     Hola no se cumple la condicion
   </ng-template>
+
+  <hr/>
+  <input type="color" [formControl]="colorCtrl">
+  <p> color: {{colorCtrl.value}} </p>

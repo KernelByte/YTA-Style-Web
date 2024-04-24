@@ -1,11 +1,12 @@
 import { NgFor } from '@angular/common';
 import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormControl, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-labs',
   standalone: true,
-  imports: [NgFor,CommonModule],
+  imports: [NgFor,CommonModule,ReactiveFormsModule],
   templateUrl: './labs.component.html',
   styleUrl: './labs.component.css'
 })
@@ -39,5 +40,7 @@ export class LabsComponent {
     const valueInput = input.value;
     this.fullname.set(valueInput)
   }
+
+  colorCtrl = new FormControl();
 
 }

@@ -31,12 +31,14 @@ export class HomeComponent {
         Validators.required,
       ]
   });
-
+ 
   changeHandler(){
     if(this.newTaskCtrl.valid){
-      const value = this.newTaskCtrl.value;
-      this.addTask(value);
+      const value = this.newTaskCtrl.value.trim();
+      if (value !== ''){
+        this.addTask(value);
       this.newTaskCtrl.setValue('');
+      }
     }
   }
 

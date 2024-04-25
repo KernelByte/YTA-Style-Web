@@ -42,5 +42,8 @@ export class LabsComponent {
   }
 
   colorCtrl = new FormControl();
+  widthCtrl = new FormControl(50,{
+    nonNullable: true
+  });
 
 }

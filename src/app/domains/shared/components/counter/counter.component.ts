@@ -23,6 +23,12 @@ export class CounterComponent {
     console.log('ngOnChanges');
     console.log('-'.repeat(10));
     console.log(changes);
+
+    const duration = changes[this.duration];
+
+    if(duration && duration.currentValue !== duration.previousValue){
+      this.doSomeTings();
+    }
   }
 
   ngOnInit(){
@@ -48,5 +54,7 @@ export class CounterComponent {
     console.log('-'.repeat(10));
   }
 
-
+  doSomeTings(){
+    console.log('Ejecutado logica de negocio');
+  }
 }

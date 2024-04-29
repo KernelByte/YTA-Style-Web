@@ -2,11 +2,12 @@ import { Component, signal } from '@angular/core';
 import { ProductComponent } from './../../components/product/product.component';
 import { Product } from './../../../shared/models/product.model';
 import { Title } from '@angular/platform-browser';
+import { HeaderComponent } from './../../../shared/components/header/header.component';
 
 @Component({
   selector: 'app-list',
   standalone: true,
-  imports: [ProductComponent],
+  imports: [ProductComponent,HeaderComponent],
   templateUrl: './list.component.html',
   styleUrl: './list.component.css'
 })
@@ -55,6 +56,20 @@ export class ListComponent {
       title: 'Producto 6',
       price: 3000,
       image: 'https://picsum.photos/480/480?r=28',
+      createAt: new Date().toISOString()
+    },
+    {
+      id: Date.now(),
+      title: 'Producto 7',
+      price: 3000,
+      image: 'https://picsum.photos/480/480?r=29',
+      createAt: new Date().toISOString()
+    },
+    {
+      id: Date.now(),
+      title: 'Producto 8',
+      price: 3000,
+      image: 'https://picsum.photos/480/480?r=30',
       createAt: new Date().toISOString()
     }];
 

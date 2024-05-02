@@ -28,7 +28,7 @@ export class ListComponent {
           this.produtSignal.set(products);
         },
         error: (error) => {
-          console.log(error);
+          //console.log(error);
         }
       });    
   }

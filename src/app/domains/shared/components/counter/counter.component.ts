@@ -14,15 +14,15 @@ export class CounterComponent {
   constructor(){
     // NO ASYNC
     //Before render
-    console.log('constructor');
-    console.log('-'.repeat(10));
+    //console.log('constructor');
+    //console.log('-'.repeat(10));
   }
 
-  ngOnChanges(changes: SimpleChanges){
+  /* ngOnChanges(changes: SimpleChanges){
     //Before and During render
-    console.log('ngOnChanges');
-    console.log('-'.repeat(10));
-    console.log(changes);
+    //console.log('ngOnChanges');
+    //console.log('-'.repeat(10));
+    //console.log(changes);
 
     const duration = changes[this.duration];
 
@@ -56,5 +56,5 @@ export class CounterComponent {
 
   doSomeTings(){
     console.log('Ejecutado logica de negocio');
-  }
+  }*/
 }

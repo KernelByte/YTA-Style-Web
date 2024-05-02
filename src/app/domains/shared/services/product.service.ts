@@ -15,4 +15,9 @@ export class ProductService {
   getProducts(){
     return this.http.get<Product[]>('https://api.escuelajs.co/api/v1/products');
   }
+
+    // Obtener un solo producto de la API
+    getOnlyProduct(id: string){
+      return this.http.get<Product>(`https://api.escuelajs.co/api/v1/products/${id}`);
+    }
 }
